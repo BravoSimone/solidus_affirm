@@ -23,9 +23,9 @@ module SolidusAffirm
     end
 
     def items
-      ActiveModel::Serializer::CollectionSerializer.new(
+      ActiveModel::ArraySerializer.new(
         object.items,
-        serializer: LineItemSerializer,
+        each_serializer: LineItemSerializer,
         root: false
       )
     end

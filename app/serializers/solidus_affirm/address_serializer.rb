@@ -3,6 +3,7 @@ require 'active_model_serializers'
 module SolidusAffirm
   class AddressSerializer < ActiveModel::Serializer
     attributes :name, :address
+    self.root = false
 
     def name
       {

@@ -16,7 +16,7 @@ module SolidusAffirm
   #   [Hash] Affirm support arbitrary key:value metadata, we pass this hash
   #   directly to Affirm if it's present.
   # @see CheckoutPayloadSerializer
-  class CheckoutPayload < ActiveModelSerializers::Model
+  class CheckoutPayload < ActiveModel::Serializer
     attr_reader :order, :config, :metadata
 
     # @param order [Spree::Order]
